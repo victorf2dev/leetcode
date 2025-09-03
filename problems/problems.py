@@ -1,6 +1,30 @@
 
 
 class Solution:
+
+    def twoSum(self, nums: list[int], target: int) -> list[int]:
+        """
+        1 Two Sum
+        
+        Exemplo 1
+        >>> nums = [2,7,11,15], target = 9
+        >>> [0,1]
+
+        Exemplo 2
+        >>> nums = [3,2,4], target = 6
+        >>> [1,2]
+
+        Exemplo 3
+        >>> nums = [3,3], target = 6
+        >>> [0,1]
+        """
+        for i, x in enumerate(nums):
+            for ii, y in enumerate(nums):
+                if ii > i:
+                    if x + y == target:
+                        return [i, ii]
+
+
     def areaOfMaxDiagonal(self, dimensions: list[list[int]]) -> int:
         """
         3000 Maximum Area of Longest Diagonal Rectangle
